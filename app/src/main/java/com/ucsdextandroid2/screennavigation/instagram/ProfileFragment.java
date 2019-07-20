@@ -1,5 +1,6 @@
 package com.ucsdextandroid2.screennavigation.instagram;
 
+import android.provider.ContactsContract;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -28,7 +29,8 @@ public class ProfileFragment extends BaseListFragment {
 
     @Override
     public void onClickAtIndex(int index) {
-
+Navigation.findNavController(requireView())
+        .navigate(ProfileFragmentDirections.actionProfileFragmentToSinglePostFragment().setUsername("Cindy"));
     }
 
     @Override
